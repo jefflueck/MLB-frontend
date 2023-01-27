@@ -1,0 +1,30 @@
+table {
+  margin: 0 auto;
+  width: 90%;
+  border: 1px solid lightgreen;
+  margin-bottom: 20px;
+}
+
+th {
+  margin: 0px 10px;
+  border-bottom: 2px solid black;
+  font-size: 15px;
+}
+
+td {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-left: 1px solid brown;
+  border-bottom: 1px solid brown;
+  font-size: 15px;
+}
+
+#team-list {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: blue;
+  cursor: pointer;
+}

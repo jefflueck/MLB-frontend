@@ -1,0 +1,42 @@
+h1 {
+  color: white;
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: white;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  background-color: rgb(202, 111, 39);
+  padding: 5px 8px;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+label {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+li {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
