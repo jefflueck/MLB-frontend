@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useNavigate } from 'react';
 import Router from './router/Router';
 import useLocalStorage from './hooks/useLocalStorage';
 import MLBApi from './api/api';
@@ -71,14 +71,11 @@ function App() {
     [token]
   );
 
-  function redirect() {
-    window.location.href = 'http://localhost:3000/';
-  }
   /** Handles site-wide logout. */
   function logout() {
     setCurrentUser(null);
     setToken(null);
-    redirect();
+    alert('You have been logged out');
   }
 
   /** Handles site-wide delete user. */

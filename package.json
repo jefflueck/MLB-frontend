@@ -16,7 +16,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "predeploy": "cp build/index.html build/200.html",
+    "deploy": "surge build --domain mlb-dream-team.surge.sh",
+    "build": "REACT_APP_BASE_URL=https://mlb-backend.herokuapp.com react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

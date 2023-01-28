@@ -76,6 +76,7 @@ const BuildingTeamPage = () => {
   const addTeam = (e) => {
     e.preventDefault();
     let newTeam = MLBApi.createTeam(currentUser.id, starters);
+    if (newTeam) alert('Team Created', newTeam);
     return newTeam;
   };
 
@@ -114,6 +115,14 @@ const BuildingTeamPage = () => {
     const oneTeam = await MLBApi.getOneTeam(userTeams.id);
   };
 
+  function redirectAfterTeamSubmit() {
+    window.location.href = 'http://localhost:3000/building';
+  }
+
+  function redirectTeamSubmit() {
+    redirectAfterTeamSubmit();
+  }
+
   return (
     <>
       <h1>MLB Dream Team</h1>
@@ -135,6 +144,7 @@ const BuildingTeamPage = () => {
         deleteTeam={deleteTeam}
         getAllTeams={getAllTeams}
         userTeams={userTeams}
+        redirectAfterTeamSubmit={redirectAfterTeamSubmit}
       />
       <BaseballTeam starters={starters} />
     </>
