@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# MLB Dream Team
+---
+[Click Here to See Deployed Version](http://mlb-dream-team.surge.sh/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+---
 
-## Available Scripts
+- User registration with a encryped password.
+- Teams per user stored on off site Database allow access from anywhere with internet or cellular connection.
+- Team creation, Team deletion, User names their own teams.
+- User has no limit of saved teams.
+- Rosters from MLB API with historical players or current players from any year of a MLB Team that existed at that time.
+- Able to mix and match players from different years and teams when creating a team.
+- All Teams delete upon user profile deletion.
 
-In the project directory, you can run:
+## Application Flow
 
-### `npm start`
+1. User registers for a free account on the register page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. User is brought to the main interactive page for building a team.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. A TEAM NAME is displayed above a baseball field with default positions holders on the baseball field.
 
-### `npm test`
+4. User inputs a year and clicks submit.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Page is dynamically replaced with list of MLB Teams current for the given year.
 
-### `npm run build`
+6. User picks a listed team by clicking on team. Page dynamically renders a roster provide by [MLB API](https://appac.github.io/mlb-data-api-docs/) of that teams roster.
+  
+  - The roster will show players name and assigned position on the field with a + to add them to your baseball field.
+  
+7. User can go back to steps 4 - 6 as much as they want to get different players from different teams and different years to build their ultimate team of their dreams.
+  
+  - Player does this thought the same inputs without having to go back in the browser navigation.
+  
+8. Once happy with their dream team, they can use the provided input and name their team.
+  
+  - User can also do this step 8 at any time in the process of building a team.
+  
+9. When the user has done all the steps and are happy with their Dream Team they can click Add Team to Franchise button and it will be stored on a Database tied to their user account as long as they have an account.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+10. A user can click the Franchise button at anytime to see all of their created teams by name.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - The user will have the option to delete any team they created from this page, or click on the team name to see the baseball field with all of the players on the field.
+  
+  - When a user clicks the **DELETE USER Button** the user and **ALL OF THEIR TEAMS** are permentaly deleted from the Database.
+ 
+## Future Features
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- A user can update username and password without losing tie to user saved teams.
 
-### `npm run eject`
+- A user can see a saved team and edit team information, save again to frachise maintainig team to user association.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/en/main)
+- [MLB API](https://appac.github.io/mlb-data-api-docs/)
+- [Axoios](https://axios-http.com/docs/intro)
+- [Express](https://expressjs.com/)
+- PostgreSQL
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- JavaScript
+- HTML
+- CSS
