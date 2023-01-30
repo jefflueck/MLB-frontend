@@ -1,6 +1,9 @@
 import React from 'react';
 import './BaseballTeam.css';
 import myImage from '../assests/Baseball_diamond_clean.svg.png';
+
+// This is a functional component that renders a baseball team.
+// Starts out as a blank team, but can be filled in by the user.
 const BaseballTeam = ({ starters }) => {
   return (
     <>

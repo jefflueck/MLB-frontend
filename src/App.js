@@ -75,7 +75,7 @@ function App() {
   function logout() {
     setCurrentUser(null);
     setToken(null);
-    alert('You have been logged out');
+    window.location.href = 'http://mlb-dream-team.surge.sh/';
   }
 
   /** Handles site-wide delete user. */

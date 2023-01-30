@@ -2,6 +2,8 @@ import React from 'react';
 import './RegisterPage.css';
 import Register from '../Forms/Register';
 
+// This is a functional component that renders a register page.
+
 const RegisterPage = ({ register }) => {
   return (
     <>

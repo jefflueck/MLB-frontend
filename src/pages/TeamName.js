@@ -1,5 +1,7 @@
 import React from 'react';
 
+// * Currently not being used.
+
 const TeamName = ({ starters }) => {
   return (
     <>

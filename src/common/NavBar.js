@@ -3,6 +3,8 @@ import './NavBar.css';
 import { useContext } from 'react';
 import UserContext from '../auth/UserContext';
 
+// This is a functional component that renders a navigation bar.
+
 const NavBar = ({ logout, deleteUser }) => {
   const { currentUser } = useContext(UserContext);
 

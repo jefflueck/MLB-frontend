@@ -8,6 +8,9 @@ import { useContext } from 'react';
 import UserContext from '../auth/UserContext';
 import currentUser from '../auth/UserContext';
 
+// This is our parent component that will hold all of our state and functions
+// It will also render our child components
+
 const BuildingTeamPage = () => {
   const { currentUser } = useContext(UserContext);
   const [teams, setTeams] = useState([]);

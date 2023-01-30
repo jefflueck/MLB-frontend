@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// This is a functional component that renders a form for registering a new user.
 
 const SignInAndRegister = ({ register }) => {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ const SignInAndRegister = ({ register }) => {
         />
         <label htmlFor="password">Password</label>
         <input
-          type="text"
+          type="password"
           id="password"
           name="password"
           onChange={handleChange}

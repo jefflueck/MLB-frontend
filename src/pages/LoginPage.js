@@ -2,6 +2,8 @@ import React from 'react';
 import './LoginPage.css';
 import SignIn from '../Forms/SignIn';
 
+// This is a functional component that renders a login page.
+
 const LoginPage = ({ login }) => {
   return (
     <>

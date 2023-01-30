@@ -6,6 +6,9 @@ import { useContext, useEffect, useState } from 'react';
 import LoadingSpinner from '../common/LoadingSpinner';
 import MLBApi from '../api/api';
 
+// This is a functional component that shows all team names, a ability to delete a team that belong to the logged in user.
+// * Logged in user does not get to see other users teams.
+
 const FranchisedTeams = () => {
   const { currentUser } = useContext(UserContext);
 
