@@ -19,7 +19,7 @@ const SignInAndRegister = ({ register }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     let res = await register(formData);
     if (res.success) {
       navigate('/building');

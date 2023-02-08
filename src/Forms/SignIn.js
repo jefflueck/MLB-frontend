@@ -19,7 +19,7 @@ const SignInAndRegister = ({ login }) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     let res = await login(formData);
     if (res.success) {
       navigate('/building');

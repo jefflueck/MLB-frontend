@@ -28,7 +28,7 @@ const FranchisedTeams = () => {
   };
 
   if (!userTeams) return <LoadingSpinner />;
-  console.log('userTeams', userTeams);
+  // console.log('userTeams', userTeams);
   return (
     <>
       <h1>Franchised Teams</h1>

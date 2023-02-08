@@ -18,7 +18,7 @@ class MLBApi {
   static token;
 
   static async request(endpoint, data = {}, method = 'get') {
-    console.debug('API Call:', endpoint, data, method);
+    // console.debug('API Call:', endpoint, data, method);
 
     // * first slash is already included before endpoint then endpoint name: ex teams vs /teams.
     const url = `${BASE_URL}/${endpoint}`;
@@ -28,7 +28,7 @@ class MLBApi {
     try {
       return (await axios({ url, method, data, params, headers })).data;
     } catch (err) {
-      console.error('API Error:', err.response);
+      // console.error('API Error:', err.response);
       let message = err.response.data.error.message;
       throw Array.isArray(message) ? message : [message];
     }
@@ -38,13 +38,13 @@ class MLBApi {
   // These methods will deal with creating, login, and getting current users from the DB.
 
   static async register(formData) {
-    console.log(formData);
+    // console.log(formData);
     let res = await this.request('auth/register', formData, 'post');
     return res.token;
   }
 
   static async login(formData) {
-    console.log(formData);
+    // console.log(formData);
     let res = await this.request('auth/token', formData, 'post');
     return res.token;
   }
@@ -92,7 +92,7 @@ class MLBApi {
   static async getUserTeams(userId) {
     console.log(userId);
     let res = await this.request(`teams/user/${userId}`);
-    console.log('RESPONSE', res);
+    // console.log('RESPONSE', res);
     // * must match all backend res which is in a res.allTeams variable.
     return res.userTeams;
   }
@@ -101,6 +101,21 @@ class MLBApi {
     let res = await this.request(`teams/${teamId}`, {}, 'delete');
     return res;
   }
+
+  // static async updateTeam(teamId, teamData) {
+  //   let res = await this.request(
+  //     `franchise/team/update/${teamId}`,
+  //     teamData,
+  //     'patch'
+  //   );
+  //   // console.log('response from updateTeam', res);
+  //   return res.userTeams;
+  // }
+
+  // static async getOneTeam(teamId) {
+  //   let res = await this.request(`franchise/team/update/${teamId}`);
+  //   return res.team;
+  // }
 
   // * The sql query will delete the user and all the teams associated with that user by the foreign key.
   static async deleteUser(username) {
